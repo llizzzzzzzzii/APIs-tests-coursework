@@ -1,10 +1,7 @@
-import json
-import os
-import requests
-from constants import Links
-from com.automation.example.refresh_new_token import *
 from com.automation.example.upload_func import *
-def test_upload_file():
-    value=upload_file(Links.FILE_NAME)
-    assert value.status_code == 200
-    assert value.json().get('name') == Links.FILE_NAME
+from fixtures.constants import *
+from conftest import *
+def test_upload_file(update_refresh_token):
+    value=upload_file(update_refresh_token)
+    assert value.status_code == 200, 'Check your file ID or file name'
+    assert value.json().get('name') == Links.FILE_NAME, 'Check your file ID or file name'
