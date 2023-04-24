@@ -10,3 +10,4 @@ class Links:
     FILE_NAME = "input.txt"
     PARENTS = "1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr"
     FILE_ID = '1wNOqf-WEn4zGvB7fCo0Ew6WYJpL2KPhH'
+    URL_CHECK = "https://www.googleapis.com/drive/v3/files/"
