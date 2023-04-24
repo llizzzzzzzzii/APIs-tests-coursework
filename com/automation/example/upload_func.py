@@ -3,6 +3,7 @@ import os
 import pytest
 import requests
 from fixtures.constants import *
+
 def upload_file(update_refresh_token):
     access_token = update_refresh_token
     file_path = os.path.join(os.getcwd(), Links.FILE_NAME)
