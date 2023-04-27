@@ -2,9 +2,7 @@ from fixtures.constants import Links
 import requests
 
 def get_token():
-    auth_url = ('https://accounts.google.com/o/oauth2/auth?'
-                'client_id={}&redirect_uri={}&scope=https://www.googleapis.com/auth/drive&response_type=code&access_type=offline'
-                .format(Links.CLIENT_ID, Links.REDIRECT_URI, Links.SCOPE))
+    auth_url = ({Links.AUTH_URL}.format(Links.CLIENT_ID, Links.REDIRECT_URI, Links.SCOPE))
     print('Откройте ссылку в браузере:\n{}'.format(auth_url))
     authorization_code = input('Введите код авторизации: ')
     token_url = Links.TOKEN_URL

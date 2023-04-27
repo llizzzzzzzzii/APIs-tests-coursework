@@ -11,3 +11,4 @@ class Links:
     PARENTS = "1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr"
     FILE_ID = '1wNOqf-WEn4zGvB7fCo0Ew6WYJpL2KPhH'
     URL_CHECK = "https://www.googleapis.com/drive/v3/files/"
+    AUTH_URL='https://accounts.google.com/o/oauth2/auth?client_id={}&redirect_uri={}&scope=https://www.googleapis.com/auth/drive&response_type=code&access_type=offline'
