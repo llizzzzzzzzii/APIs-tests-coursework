@@ -4,15 +4,11 @@ import os
 import pytest
 import requests
 from fixtures.constants import *
-import allure
 from com.deco import logging as log
 
 
 # @log("Upload new file")
-@allure.feature("Checking fule uploud")
-@allure.story("Проверка функции загрузки файла 'input.txt'")
 def upload_file(update_refresh_token,url_down,url_check):
-    with allure.step("Загрузка файла на google drive"):
         access_token = update_refresh_token
         file_path = os.path.join(os.getcwd(), Links.FILE_NAME)
         headers = {"Authorization": f"Bearer {access_token}"}
@@ -24,4 +20,4 @@ def upload_file(update_refresh_token,url_down,url_check):
         url1 =f"{url_check}{file_id}"
         headers = {"Authorization": f"Bearer {access_token}"}
         response = requests.get(url1, headers=headers)
-    return response
+        return response

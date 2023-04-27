@@ -1,15 +1,24 @@
 from conftest import *
 import pytest
 from fixtures.upload.api import *
-
+import allure
+@allure.feature("Проверка загрузки файла")
+@allure.story("Проверка функции загрузки файла 'input.txt'")
 @pytest.mark.positive
 def test_upload_file(update_refresh_token):
-    value = upload_file(update_refresh_token,Links.URL_DOWNLOAD,Links.URL_CHECK)
-    assert value.status_code == 200, 'Check your file ID or file name'
-    assert value.json().get('name') == Links.FILE_NAME, 'Check your file ID or file name'
+    with allure.step("Загрузка файла на google drive"):
+        value = upload_file(update_refresh_token,Links.URL_DOWNLOAD,Links.URL_CHECK)
+    with allure.step("Запрос отправлен, посмотрим код ответа"):
+        assert value.status_code == 200, 'Check your file ID or file name'
+    with allure.step("Проверим имя загружееного файла"):
+        assert value.json().get('name') == Links.FILE_NAME, 'Check your file ID or file name'
 
 
+@allure.feature("Проверка загрузки файла")
+@allure.story("Проверка функции загрузки файла 'input.txt' по неверной ссылке")
 @pytest.mark.negative
 def test_unknown_link(update_refresh_token):
-    value = upload_file(update_refresh_token, Links.URL_DOWNLOAD,Links.URL_DOWNLOAD)
-    assert value.status_code == 400, "Check your link"
+    with allure.step("Загрузка файла на google drive"):
+        value = upload_file(update_refresh_token, Links.URL_DOWNLOAD,Links.URL_DOWNLOAD)
+    with allure.step("Запрос отправлен, посмотрим код ответа"):
+        assert value.status_code == 400, "Check your link"
