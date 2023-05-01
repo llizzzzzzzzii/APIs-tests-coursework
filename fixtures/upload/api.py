@@ -1,7 +1,7 @@
 import json
 import os
 import requests
-from fixtures.constants import *
+from fixtures.constants import Links
 from fixtures.deco import logging as log
 
 @log("Upload new file")
