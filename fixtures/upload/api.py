@@ -1,14 +1,11 @@
 import json
-import logging
 import os
-import pytest
 import requests
 from fixtures.constants import *
-from com.deco import logging as log
+from fixtures.deco import logging as log
 
-
-# @log("Upload new file")
-def upload_file(update_refresh_token,url_down,url_check):
+@log("Upload new file")
+def upload_file(update_refresh_token, url_down, url_check):
         access_token = update_refresh_token
         file_path = os.path.join(os.getcwd(), Links.FILE_NAME)
         headers = {"Authorization": f"Bearer {access_token}"}

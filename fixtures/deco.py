@@ -5,6 +5,11 @@ from functools import wraps
 from json import JSONDecodeError
 
 logger = logging.getLogger("api")
+logger.setLevel(logging.INFO)
+s_handler = logging.StreamHandler()
+s_format = logging.Formatter('%(name)s %(levelname)s - %(message)s')
+s_handler.setFormatter(s_format)
+logger.addHandler(s_handler)
 
 def logging(message):
     """

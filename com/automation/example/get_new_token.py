@@ -1,8 +1,10 @@
 from fixtures.constants import Links
 import requests
 
+
+#@log("Get Tokens")
 def get_token():
-    auth_url = ({Links.AUTH_URL}.format(Links.CLIENT_ID, Links.REDIRECT_URI, Links.SCOPE))
+    auth_url = (Links.AUTH_URL.format(Links.CLIENT_ID, Links.REDIRECT_URI, Links.SCOPE))
     print('Откройте ссылку в браузере:\n{}'.format(auth_url))
     authorization_code = input('Введите код авторизации: ')
     token_url = Links.TOKEN_URL
