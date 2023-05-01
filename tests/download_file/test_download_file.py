@@ -3,7 +3,7 @@ import pytest
 from fixtures.upload.api import upload_file
 from fixtures.download.api import download_file
 import allure
-
+from fixtures.constants import Links
 @allure.feature("Проверка скачивания файла")
 @allure.story("Проверка функции скачивания файла 'input.txt' в текущую директорию")
 @pytest.mark.positive

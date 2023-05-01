@@ -1,7 +1,9 @@
 
 import pytest
 # from fixtures.delete.api import
-from fixtures.delete.api import upload_file,delete_file
+from fixtures.delete.api import delete_file
+from fixtures.upload.api import upload_file
+from fixtures.constants import Links
 import allure
 import conftest
 @allure.feature("Проверка удаления файла")

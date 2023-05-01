@@ -2,7 +2,7 @@ import conftest
 import pytest
 from fixtures.upload.api import upload_file
 import allure
-
+from fixtures.constants import Links
 @allure.feature("Проверка загрузки файла")
 @allure.story("Проверка функции загрузки файла 'input.txt'")
 @pytest.mark.positive
