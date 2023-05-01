@@ -8,7 +8,8 @@ from fixtures.constants import Links
 @pytest.mark.positive
 def test_upload_file(update_refresh_token):
     with allure.step("Загрузка файла на Google Drive"):
-        value = upload_file(update_refresh_token, Links.URL_DOWNLOAD, Links.URL_CHECK)
+        value = upload_file(update_refresh_token,
+                            Links.URL_DOWNLOAD, Links.URL_CHECK)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         assert value.status_code == 200, 'Check your file ID or file name'
     with allure.step("Проверим имя загруженного файла"):
@@ -19,6 +20,7 @@ def test_upload_file(update_refresh_token):
 @pytest.mark.negative
 def test_unknown_link(update_refresh_token):
     with allure.step("Загрузка файла на Google Drive"):
-        value = upload_file(update_refresh_token, Links.URL_DOWNLOAD, Links.URL_DOWNLOAD)
+        value = upload_file(update_refresh_token,
+                            Links.URL_DOWNLOAD, Links.URL_DOWNLOAD)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         assert value.status_code == 400, "Check your link"
