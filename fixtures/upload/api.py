@@ -3,6 +3,7 @@ import os
 import requests
 from fixtures.constants import *
 from fixtures.deco import logging as log
+from fixtures.request import request
 
 @log("Upload new file")
 def upload_file(update_refresh_token, url_down, url_check):
@@ -16,5 +17,8 @@ def upload_file(update_refresh_token, url_down, url_check):
         file_id = response.json()["id"]
         url1 =f"{url_check}{file_id}"
         headers = {"Authorization": f"Bearer {access_token}"}
-        response = requests.get(url1, headers=headers)
+        response = request(method="GET",
+                       url=url1,
+                       headers=headers
+                       )
         return response
