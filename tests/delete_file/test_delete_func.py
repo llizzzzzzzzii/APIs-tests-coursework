@@ -5,7 +5,7 @@ from fixtures.delete.api import delete_file
 from fixtures.upload.api import upload_file
 from fixtures.constants import Links
 import allure
-import conftest
+
 @allure.feature("Проверка удаления файла")
 @allure.story("Проверка функции удаления файла 'input.txt'")
 @pytest.mark.positive
