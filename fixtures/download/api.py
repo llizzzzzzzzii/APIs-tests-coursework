@@ -1,5 +1,6 @@
-from fixtures.upload.api import *
-from fixtures.constants import *
+
+import requests
+from fixtures.constants import Links
 from fixtures.deco import logging as log
 
 @log("Download file")

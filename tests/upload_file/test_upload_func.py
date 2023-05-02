@@ -1,6 +1,8 @@
+from conftest import *
 import pytest
-from fixtures.upload.api import *
+from fixtures.upload.api import upload_file
 import allure
+from fixtures.constants import Links
 
 @allure.feature("Проверка загрузки файла")
 @allure.story("Проверка функции загрузки файла 'input.txt'")
