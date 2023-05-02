@@ -16,7 +16,6 @@ def logging(message):
     Request Logging
     :return: response
     """
-
     def wrapper(function):
         @wraps(function)
         def inner(*args, **kwargs):

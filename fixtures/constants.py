@@ -11,5 +11,8 @@ class Links:
     PARENTS = "1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr"
     FILE_ID = 'WEn4zGvB7fCo0Ew6WYJpL2KPhH'
     URL_CHECK = "https://www.googleapis.com/drive/v3/files/"
-    AUTH_URL='https://accounts.google.com/o/oauth2/auth?client_id={}&redirect_uri={}&scope=https://www.googleapis.com/auth/drive&response_type=code&access_type=offline'
-    DOWNLOAD_FILE_NAME='downloaded_file.txt'
+    AUTH_URL = 'https://accounts.google.com/o/oauth2/auth?client_id={}&redirect_uri={}&scope=https://www.googleapis.com/auth/drive&response_type=code&access_type=offline'
+    DOWNLOAD_FILE_NAME = 'downloaded_file.txt'
+
+    ACCESS_TOKEN = "ya29.a0Ael9sCNt8Tp7boeKgm7_HDReUtJZnw7aZm81YdV-kX9Q0mD210z14vJkMrR8XAi1s31LgQWSsBvR8hVFlhw15yM_xz1yoVwER7FueMZ2svYCQOm1meqAtKrKhRqzA2graqY0H_nDvdYhV0fHjrc401iUg6HNaCgYKAV4SARISFQF4udJhMoLbcPzlgU0_vwQqJEMb1A0163"
+    FILE_ID_CORR = '1QZX7KDqQn3B9wqkDnGIJt4twph51K9wb'

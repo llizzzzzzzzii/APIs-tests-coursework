@@ -2,6 +2,9 @@ import pytest
 from fixtures.constants import Links
 from fixtures.request import request
 from fixtures.deco import logging as log
+import json
+import os
+import requests
 
 @log("Update refresh token")
 def update_refresh_token_api():
@@ -22,6 +25,18 @@ def update_refresh_token():
     response = update_refresh_token_api()
     if response.ok:
         token = response.json()['access_token']
+        Links.ACCESS_TOKEN = token
         return token
     else:
         return None
+
+@pytest.fixture()
+def get_file_id():
+    file_path = os.path.join(os.getcwd(), Links.FILE_NAME)
+    headers = {"Authorization": f"Bearer {Links.ACCESS_TOKEN}"}
+    params = {"name": Links.FILE_NAME, "parents": [Links.PARENTS]}
+    files = {"data": ("metadata", json.dumps(params), "application/json; charset=UTF-8"),
+             "file": open(file_path, "rb")}
+    response = requests.post(Links.URL_DOWNLOAD, headers=headers, files=files)
+    Links.FILE_ID_CORR = response.json()["id"]
+    return response.json()["id"]
