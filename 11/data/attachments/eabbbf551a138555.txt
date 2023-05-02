@@ -1,0 +1,12 @@
+INFO     api:deco.py:23 Update refresh token
+INFO     api:deco.py:43 Request method: POST, url: https://oauth2.googleapis.com/token, body:refresh_token=1%2F%2F0c_QMjblQzhrECgYIARAAGAwSNwF-L9Ir8BdP8rZPXUf07o0a6OQHbLbIsX8wjRvuC4YzHp007JB0s42CdFhTYjFOJRHVIGgUgRM&client_id=77864409271-ujcgeg2243mca6ek98pn7qahbjjhalga.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token
+INFO     api:deco.py:54 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200, body:
+{
+    "access_token": "ya29.a0AWY7CkkL3QHPlt1eWMG4BKml2i4yLLfEt2G9TVP6kTFDPOx2Or1nvjSQ4M0OgOhai07zJxfmCORd6M_T4WYw1ZhGojsRkHeQwn_lLcIfe7As-R2RXzJDpJ9HZrmHSQiitbbVMOzk1s2Z_IdLS203A68mllm99yx2aCgYKATASAQ4SFQG1tDrpAzLmuHffopxs6qTc-766hA0167",
+    "expires_in": 3599,
+    "scope": "https://www.googleapis.com/auth/drive",
+    "token_type": "Bearer"
+}
+INFO     api:deco.py:23 Upload new file
+INFO     api:deco.py:43 Request method: GET, url: https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart1JEZ6UOmYnLCvVZ4E-2GGybI3c6oSExBf
+INFO     api:deco.py:60 Response method: GET, url: https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart1JEZ6UOmYnLCvVZ4E-2GGybI3c6oSExBf, status: 400, body: Bad Request
