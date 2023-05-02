@@ -1,1 +1,15 @@
-lololo
+{
+  "error": {
+    "code": 404,
+    "message": "File not found: WEn4zGvB7fCo0Ew6WYJpL2KPhH.",
+    "errors": [
+      {
+        "message": "File not found: WEn4zGvB7fCo0Ew6WYJpL2KPhH.",
+        "domain": "global",
+        "reason": "notFound",
+        "location": "fileId",
+        "locationType": "parameter"
+      }
+    ]
+  }
+}
