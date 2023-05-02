@@ -21,7 +21,7 @@ def test_upload_file(update_refresh_token):
 @allure.story("Проверка загрузился ли файл 'input.txt' по неверной ссылке")
 @pytest.mark.negative
 def test_unknown_link(update_refresh_token):
-    with allure.step("Загрузка файла на Google Drive"):
+    with allure.step("Загрузка файла по неизвестной ссылке на Google Drive"):
         value = upload_file(update_refresh_token,
                             Links.URL_DOWNLOAD, Links.URL_DOWNLOAD)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
