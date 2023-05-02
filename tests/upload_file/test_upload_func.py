@@ -1,4 +1,3 @@
-from conftest import *
 import pytest
 from fixtures.upload.api import upload_file
 import allure
