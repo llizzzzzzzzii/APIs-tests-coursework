@@ -12,7 +12,8 @@ def test_upload_file(update_refresh_token, get_file_id):
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         assert value.status_code == 200, 'Check your file ID or file name'
     with allure.step("Проверим имя загруженного файла"):
-        assert value.json().get('name') == Links.FILE_NAME, 'Check your file ID or file name'
+        assert value.json().get('name') == Links.FILE_NAME, \
+            'Check your file ID or file name'
 
 @allure.feature("Проверка загрузки файла")
 @allure.story("Проверка загрузился ли файл 'input.txt' по неверной ссылке")

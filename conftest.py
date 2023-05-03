@@ -35,7 +35,8 @@ def get_file_id():
     file_path = os.path.join(os.getcwd(), Links.FILE_NAME)
     headers = {"Authorization": f"Bearer {Links.ACCESS_TOKEN}"}
     params = {"name": Links.FILE_NAME, "parents": [Links.PARENTS]}
-    files = {"data": ("metadata", json.dumps(params), "application/json; charset=UTF-8"),
+    files = {"data": ("metadata", json.dumps(params),
+                      "application/json; charset=UTF-8"),
              "file": open(file_path, "rb")}
     response = requests.post(Links.URL_DOWNLOAD, headers=headers, files=files)
     Links.FILE_ID_CORR = response.json()["id"]

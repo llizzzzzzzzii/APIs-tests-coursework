@@ -21,7 +21,8 @@ class Links:
 
     ACCESS_TOKEN = "ya29.a0Ael9sCNt8Tp7boeKgm7_HDReUtJZnw7aZm81YdV-kX9Q0mD210z14vJkMrR8" \
                    "XAi1s31LgQWSsBvR8hVFlhw15yM_xz1yoVwER7FueMZ2svYCQOm1meqAtKrKhRqzA2gra" \
-                   "qY0H_nDvdYhV0fHjrc401iUg6HNaCgYKAV4SARISFQF4udJhMoLbcPzlgU0_vwQqJEMb1A0163"
+                   "qY0H_nDvdYhV0fHjrc401iUg6HNaCgYKAV4SARISF" \
+                   "QF4udJhMoLbcPzlgU0_vwQqJEMb1A0163"
     FILE_ID_CORR = '1QZX7KDqQn3B9wqkDnGIJt4twph51K9wb'
     FILE_NAME_INCORR='inpt.txt'
     PARENTS_INCORR='D6y-7wueDGxoGFFtDfvjrVUDTVwr'
