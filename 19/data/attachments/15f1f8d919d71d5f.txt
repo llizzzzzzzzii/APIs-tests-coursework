@@ -1,0 +1,27 @@
+INFO     api:deco.py:22 Update refresh token
+INFO     api:deco.py:42 Request method: POST, url: https://oauth2.googleapis.com/token, body:refresh_token=1%2F%2F0c_QMjblQzhrECgYIARAAGAwSNwF-L9Ir8BdP8rZPXUf07o0a6OQHbLbIsX8wjRvuC4YzHp007JB0s42CdFhTYjFOJRHVIGgUgRM&client_id=77864409271-ujcgeg2243mca6ek98pn7qahbjjhalga.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token
+INFO     api:deco.py:53 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200, body:
+{
+    "access_token": "ya29.a0AWY7CknaDpUlKoPXzdaa0LklBBYN-6ULEGw4GQ99bPOHUQVAFsM2NGlKGm9VSAuwnNIP9d0KJWvZXOqfy2A85KeQWegkraxEYa1eE8_U0pUabL258BHpxBiBGP2-ISj4VHE52awnsjaaKiHGqoydj-Q4B3PWSdCdaCgYKASoSAQ4SFQG1tDrpXK55wvoLRCI6pXAVZensSA0167",
+    "expires_in": 3599,
+    "scope": "https://www.googleapis.com/auth/drive",
+    "token_type": "Bearer"
+}
+INFO     api:deco.py:22 Download file
+INFO     api:deco.py:42 Request method: GET, url: https://www.googleapis.com/drive/v3/files/WEn4zGvB7fCo0Ew6WYJpL2KPhH?alt=media
+INFO     api:deco.py:53 Response method: GET, url: https://www.googleapis.com/drive/v3/files/WEn4zGvB7fCo0Ew6WYJpL2KPhH?alt=media, status: 404, body:
+{
+    "error": {
+        "code": 404,
+        "message": "File not found: WEn4zGvB7fCo0Ew6WYJpL2KPhH.",
+        "errors": [
+            {
+                "message": "File not found: WEn4zGvB7fCo0Ew6WYJpL2KPhH.",
+                "domain": "global",
+                "reason": "notFound",
+                "location": "fileId",
+                "locationType": "parameter"
+            }
+        ]
+    }
+}

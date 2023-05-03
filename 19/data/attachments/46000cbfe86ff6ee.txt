@@ -1,0 +1,21 @@
+INFO     api:deco.py:22 Update refresh token
+INFO     api:deco.py:42 Request method: POST, url: https://oauth2.googleapis.com/token, body:refresh_token=1%2F%2F0c_QMjblQzhrECgYIARAAGAwSNwF-L9Ir8BdP8rZPXUf07o0a6OQHbLbIsX8wjRvuC4YzHp007JB0s42CdFhTYjFOJRHVIGgUgRM&client_id=77864409271-ujcgeg2243mca6ek98pn7qahbjjhalga.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token
+INFO     api:deco.py:53 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200, body:
+{
+    "access_token": "ya29.a0AWY7CkmyKRafW5z3LBdy6EiLxS_Zg0yDms13aGLHq1JuL05jN1XGQ6hMY5uuulmdlS6hQSbeRtwPSkDyNjVz_-jd63HcUcHR2Cdn6GeirVutyI79oLcYJOucDgKyKyTWcSszNLIqxjRjNrqghx4oRd6HtdNrMhvXaCgYKAdwSAQ4SFQG1tDrpwe-F3ZQW2EKyks8n6ZTz4A0167",
+    "expires_in": 3599,
+    "scope": "https://www.googleapis.com/auth/drive",
+    "token_type": "Bearer"
+}
+INFO     api:deco.py:22 Upload new file
+INFO     api:deco.py:42 Request method: GET, url: https://www.googleapis.com/drive/v3/files/1KpVpuNR0nQC11fzlenOyD3P4gwowhfIe
+INFO     api:deco.py:53 Response method: GET, url: https://www.googleapis.com/drive/v3/files/1KpVpuNR0nQC11fzlenOyD3P4gwowhfIe, status: 200, body:
+{
+    "kind": "drive#file",
+    "id": "1KpVpuNR0nQC11fzlenOyD3P4gwowhfIe",
+    "name": "input.txt",
+    "mimeType": "text/plain"
+}
+INFO     api:deco.py:22 Download file
+INFO     api:deco.py:42 Request method: GET, url: https://www.googleapis.com/drive/v3/files/1KpVpuNR0nQC11fzlenOyD3P4gwowhfIe?alt=media
+INFO     api:deco.py:59 Response method: GET, url: https://www.googleapis.com/drive/v3/files/1KpVpuNR0nQC11fzlenOyD3P4gwowhfIe?alt=media, status: 200, body: File for testing the Google Drive API
