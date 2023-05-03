@@ -1,5 +1,4 @@
 import pytest
-from fixtures.upload.api import upload_file
 from fixtures.download.api import download_file
 import allure
 from fixtures.constants import Links
@@ -7,9 +6,9 @@ from fixtures.constants import Links
 @allure.feature("Проверка скачивания файла")
 @allure.story("Проверка функции скачивания файла 'input.txt'")
 @pytest.mark.positive
-def test_download_file(update_refresh_token, get_file_id):
+def test_download_file(update_refresh_token):
     with allure.step("Скачивание файла с Google Drive"):
-        value = download_file(upload_file(Links.URL_CHECK).json()["id"])
+        value = download_file(Links.DOWNLOAD_FILE_ID)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         assert value.status_code == 200, "Check your file ID"
 

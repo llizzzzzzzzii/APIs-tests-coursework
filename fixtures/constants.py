@@ -18,13 +18,11 @@ class Links:
                'redirect_uri={}&scope=https://www.googleapis.com/' \
                'auth/drive&response_type=code&access_type=offline'
     DOWNLOAD_FILE_NAME = 'downloaded_file.txt'
-
-    ACCESS_TOKEN = "ya29.a0Ael9sCNt8Tp7boeKgm7_HDReUtJZnw7aZm8" \
-                   "1YdV-kX9Q0mD210z14vJkMrR8" \
-                   "XAi1s31LgQWSsBvR8hVFlhw15yM_xz1yoVwER7Fue" \
-                   "MZ2svYCQOm1meqAtKrKhRqzA2gra" \
-                   "qY0H_nDvdYhV0fHjrc401iUg6HNaCgYKAV4SARISF" \
-                   "QF4udJhMoLbcPzlgU0_vwQqJEMb1A0163"
+    ACCESS_TOKEN = 'ya29.a0AWY7CkktLKzfQbNTDx2dp9R6CCQH7K1C14WOPHPXSQlkmKr0COMMnM6hMpLJSOvwleerIZV8t10NIU4N-mVp4xDovbattKX9IGwMdIUKQBMrJ88p4OuWP80V5bkv0dCA8aRcPEBmdXlrtCnFppi1vlSFN5dyLX5CaCgYKAYESAQ4SFQG1tDrpH8r9Kf3fDrnDPosJhoWbZw0167'
     FILE_ID_CORR = '1QZX7KDqQn3B9wqkDnGIJt4twph51K9wb'
-    FILE_NAME_INCORR = 'inpt.txt'
-    PARENTS_INCORR = 'D6y-7wueDGxoGFFtDfvjrVUDTVwr'
+    FILE_NAME_INCORR='inpt.txt'
+    PARENTS_INCORR='D6y-7wueDGxoGFFtDfvjrVUDTVwr'
+    DOWNLOAD_FILE_ID='1aR5wXYRFi-KO8AE-6WQdrUJHG_W-QRXm'
+    NEW_FILE_NAME = 'testik.txt'
+    FOLDER_NAME = 'test_folder'
+    URL_ADD='https://www.googleapis.com/drive/v3/files'
