@@ -1,0 +1,12 @@
+api INFO - Update refresh token
+api INFO - Request method: POST, url: https://oauth2.googleapis.com/token, body:refresh_token=1%2F%2F0c_QMjblQzhrECgYIARAAGAwSNwF-L9Ir8BdP8rZPXUf07o0a6OQHbLbIsX8wjRvuC4YzHp007JB0s42CdFhTYjFOJRHVIGgUgRM&client_id=77864409271-ujcgeg2243mca6ek98pn7qahbjjhalga.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token
+api INFO - Response method: POST, url: https://oauth2.googleapis.com/token, status: 200, body:
+{
+    "access_token": "ya29.a0AWY7CkkZjRCjiWA1MWO4hFvtosSCfgkP4-_bMzwtKsnuJxnKOEKjcdNrsnZMmJdloGd6gbph6MaVCovFEfaVpbXl1MzA8YV3p_lqDOpDMZpUEgeCEXYrn9GiUOzjpGqFyh7wLvy6XQ2Z2jh0cW3QWW96d0PaVFP8aCgYKAR0SAQ4SFQG1tDrp37TGdtBfsTVVn7azFhU-Jg0167",
+    "expires_in": 3599,
+    "scope": "https://www.googleapis.com/auth/drive",
+    "token_type": "Bearer"
+}
+api INFO - Upload new file
+api INFO - Request method: GET, url: https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart1I8HmE8m4Iq4vr2TT_OIi5Pt0OQvGt7-S
+api INFO - Response method: GET, url: https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart1I8HmE8m4Iq4vr2TT_OIi5Pt0OQvGt7-S, status: 400, body: Bad Request
