@@ -1,5 +1,4 @@
 from fixtures.constants import Links
-from fixtures.deco import logging as log
 from fixtures.request import Request
 
 def download_file(file_id):

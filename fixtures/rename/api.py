@@ -1,14 +1,8 @@
-import requests
 from fixtures.constants import Links
+from fixtures.request import Request
 def rename_file():
-    headers = {
-            'Authorization': f'Bearer {Links.ACCESS_TOKEN}',
-            'Content-Type': 'application/json'
-        }
-    url = f'{Links.URL_CHECK}{Links.DOWNLOAD_FILE_ID}'
-
-    data = {
-            'name': Links.NEW_FILE_NAME
-        }
-    response = requests.patch(url, headers=headers, json=data)
+    response = Request("Rename file").send_request(method="PATCH",
+                                                   url=f'{Links.URL_CHECK}{Links.DOWNLOAD_FILE_ID}',
+                                                   json={'name': Links.NEW_FILE_NAME},
+                                                   headers={"Authorization": f"Bearer {Links.ACCESS_TOKEN}"})
     return response

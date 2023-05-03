@@ -1,6 +1,5 @@
 from fixtures.request import Request
 from fixtures.constants import Links
-from fixtures.deco import logging as log
 
 def search_files(file_name, parents):
     response = Request("Search Files").send_request(method="GET",
