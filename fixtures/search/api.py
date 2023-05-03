@@ -1,11 +1,11 @@
-import requests
+from fixtures.request import request
 from fixtures.constants import Links
-def search_files(update_refresh_token,file_name,parents):
-    access_token=update_refresh_token
-    url = Links.URL_CHECK
-    params = {"q": f"name='{file_name}' and '{parents}' in parents"}
-    headers = {
-        "Authorization": f"Bearer {access_token}"
-    }
-    response = requests.get(url, params=params, headers=headers)
+from fixtures.deco import logging as log
+
+@log("Search Files")
+def search_files(file_name, parents):
+    response = request(method="GET",
+                       url=Links.URL_CHECK,
+                       params={"q": f"name='{file_name}' and '{parents}' in parents"},
+                       headers={"Authorization": f"Bearer {Links.ACCESS_TOKEN}"})
     return response
