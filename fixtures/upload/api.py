@@ -1,10 +1,9 @@
 from fixtures.deco import logging as log
-from fixtures.request import request
+from fixtures.request import Request
 from fixtures.constants import Links
 
-@log("Upload new file")
 def upload_file(url_check):
-        response = request(method="GET",
+        response = Request("Upload new file").send_request(method="GET",
                            url=f"{url_check}{Links.FILE_ID_CORR}",
                            headers={"Authorization": f"Bearer {Links.ACCESS_TOKEN}"})
         return response

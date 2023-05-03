@@ -1,12 +1,11 @@
 import pytest
 from fixtures.constants import Links
-from fixtures.request import request
+from fixtures.request import Request
 from fixtures.deco import logging as log
 import json
 import os
 import requests
 
-@log("Update refresh token")
 def update_refresh_token_api():
     token_data = {
         'refresh_token': Links.REFRESH_TOKEN,
@@ -14,7 +13,7 @@ def update_refresh_token_api():
         'client_secret': Links.CLIENT_SECRET,
         'grant_type': 'refresh_token',
     }
-    response = request(method="POST",
+    response = Request("Update refresh token").send_request(method="POST",
                        url=Links.TOKEN_URL,
                        data=token_data,
                        )
