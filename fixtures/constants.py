@@ -23,7 +23,7 @@ class Links:
     FILE_NAME_INCORR = 'inpt.txt'
     PARENTS_INCORR = 'D6y-7wueDGxoGFFtDfvjrVUDTVwr'
     DOWNLOAD_FILE_ID = '1aR5wXYRFi-KO8AE-6WQdrUJHG_W-QRXm'
-    NEW_FILE_NAME = 'testik.txt'
+    NEW_FILE_NAME = 'testikk.txt'
     FOLDER_NAME = 'test_folder'
     URL_ADD = 'https://www.googleapis.com/drive/v3/files'
     URL_UPLOAD='https://www.googleapis.com/upload/drive/v3/files/'
