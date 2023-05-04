@@ -30,3 +30,4 @@ class Links:
     EDIT_FILE_ID='1Oy7aSxxusU2TsPfBb1GUoKO7J3Imj7LT'
     PARENTS_MOVE='1ODeVtN1YdGHQzl2mk4WjYiVn-_JBFUzr'
     ID_FILE='1ZSaMSuxncc210cJRdVwGb-VCO4Bi_7Sl'
+    NAME_FOLDER='python'
