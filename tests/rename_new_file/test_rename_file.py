@@ -1,9 +1,9 @@
-import pytest
 from fixtures.rename.api import rename_file
 import allure
 from fixtures.response import Response
 import pytest
 from fixtures.constants import Links
+
 @allure.feature("Проверка переименования файла")
 @allure.story("Проверка функции переименования файла")
 @pytest.mark.positive

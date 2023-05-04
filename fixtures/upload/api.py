@@ -1,4 +1,3 @@
-from fixtures.deco import logging as log
 from fixtures.request import Request
 from fixtures.constants import Links
 

@@ -1,4 +1,3 @@
-
 from fixtures.constants import Links
 from fixtures.request import Request
 

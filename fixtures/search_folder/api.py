@@ -1,5 +1,4 @@
 from fixtures.request import Request
-from fixtures.constants import Links
 
 def search_folder(access_token):
     response = Request("Search Files").send_request(method="GET",
