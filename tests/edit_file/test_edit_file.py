@@ -12,5 +12,5 @@ def test_edit_file(update_refresh_token):
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 200, "Check your file ID")
     with allure.step("Проверим имя файла, который изменяли"):
-        Response.log_assert(value.json().get('name') == "test.txt", "Check your folder ID")
+        Response.log_assert(value.json().get('name') == "test_edit_file.txt", "Check your folder ID")
 
