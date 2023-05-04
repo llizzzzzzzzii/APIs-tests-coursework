@@ -18,7 +18,7 @@ def test_search_file(update_refresh_token):
 
 @allure.feature("Проверка поиска файла")
 @allure.story("Проверка поиска файла с неверными параметрами 'input.txt'")
-@pytest.mark.positive
+@pytest.mark.negative
 def test_search_unknown_file(update_refresh_token):
     with allure.step("Поиск файла с неверным ID в неверной папке на Google Drive"):
         value = search_files(Links.FILE_NAME_INCORR, Links.PARENTS_INCORR)
