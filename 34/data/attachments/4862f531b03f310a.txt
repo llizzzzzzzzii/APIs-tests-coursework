@@ -1,2 +1,0 @@
-api INFO - Update refresh token
-api INFO - Response method: POST, url: https://oauth2.googleapis.com/token, status: 200

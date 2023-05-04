@@ -1,4 +1,0 @@
-INFO     api:request.py:13 Update refresh token
-INFO     api:request.py:15 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200
-INFO     api:request.py:13 Rename file
-INFO     api:request.py:15 Response method: PATCH, url: https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart1aR5wXYRFi-KO8AE-6WQdrUJHG_W-QRXm, status: 400
