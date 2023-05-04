@@ -18,7 +18,7 @@ def test_add_folder(update_refresh_token):
 @allure.feature("Проверка создания файла")
 @allure.story("Проверка функции создания папки по неверной ссылке ")
 @pytest.mark.positive
-def test_search_unknown_file(update_refresh_token):
+def test_add_unknown_folder(update_refresh_token):
     with allure.step("Создание папки по неверной ссылке на Google Drive"):
         value = add_new_folder('')
     with allure.step("Запрос отправлен, посмотрим код ответа"):
