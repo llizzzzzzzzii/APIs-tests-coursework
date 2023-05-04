@@ -28,3 +28,5 @@ class Links:
     URL_ADD = 'https://www.googleapis.com/drive/v3/files'
     URL_UPLOAD='https://www.googleapis.com/upload/drive/v3/files/'
     EDIT_FILE_ID='1Oy7aSxxusU2TsPfBb1GUoKO7J3Imj7LT'
+    PARENTS_MOVE='1ODeVtN1YdGHQzl2mk4WjYiVn-_JBFUzr'
+    ID_FILE='1ZSaMSuxncc210cJRdVwGb-VCO4Bi_7Sl'
