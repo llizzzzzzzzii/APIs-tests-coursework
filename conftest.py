@@ -31,7 +31,7 @@ def update_refresh_token():
 
 @pytest.fixture()
 def get_file_id():
-    file_path = os.path.join(os.getcwd(), Links.FILE_NAME)
+    file_path = os.path.join(os.getcwd(), Links.FILE_PATH)
     headers = {"Authorization": f"Bearer {Links.ACCESS_TOKEN}"}
     params = {"name": Links.FILE_NAME, "parents": [Links.PARENTS]}
     files = {"data": ("metadata", json.dumps(params),
