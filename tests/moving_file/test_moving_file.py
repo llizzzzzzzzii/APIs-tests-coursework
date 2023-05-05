@@ -17,7 +17,7 @@ def test_moving_file(update_refresh_token, get_file_id):
 @allure.feature("Проверка перемещения файла")
 @allure.story("Проверка функции перемещения файла")
 @pytest.mark.negative
-def test_moving_unknown_file(update_refresh_token, get_file_id):
+def test_moving_unknown_file(update_refresh_token):
     with allure.step("Перемещение несуществующего файла в несуществующую папку на Google Drive"):
         value = moving_file(Links.FILE_ID, Links.PARENTS_INCORR)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
