@@ -36,4 +36,6 @@ class Links:
     NAME_FOLDER = 'python'
     DATE = '2023-05-04T06:57:36.763Z'
     CREATE_FILE_NAME = 'creating file.txt'
-    MOVE_FOLDER_ID = ''
+    FOLDER_FOR_MOVING = '1CEJm-UnzfaNjcYQKW7Ctjx1d5S-DO44V'
+    TRASH = 'trash'
+    URL_DELETE = 'https://www.googleapis.com/drive/v2/files/'
