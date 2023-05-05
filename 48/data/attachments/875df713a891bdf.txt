@@ -1,0 +1,6 @@
+api INFO - Update refresh token
+api INFO - Response method: POST, url: https://oauth2.googleapis.com/token, status: 200
+api INFO - Upload new file
+api INFO - Response method: GET, url: https://www.googleapis.com/drive/v3/files/1XfjoOArJToCIllV86YLDsjmaZFwtF5tQ, status: 200
+api INFO - Delete file to the trash
+api INFO - Response method: POST, url: https://www.googleapis.com/drive/v2/files/1XfjoOArJToCIllV86YLDsjmaZFwtF5tQ/trash, status: 200
