@@ -1,0 +1,6 @@
+api INFO - Update refresh token
+api INFO - Response method: POST, url: https://oauth2.googleapis.com/token, status: 200
+api INFO - Upload new file
+api INFO - Response method: GET, url: https://www.googleapis.com/drive/v3/files/1TEiuNsVzMmn-hBA0QZa7M9JVBuTuLY48, status: 200
+api INFO - Moving file
+api INFO - Response method: PATCH, url: https://www.googleapis.com/drive/v3/files/1TEiuNsVzMmn-hBA0QZa7M9JVBuTuLY48?addParents=1CEJm-UnzfaNjcYQKW7Ctjx1d5S-DO44V&removeParents=1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr, status: 200
