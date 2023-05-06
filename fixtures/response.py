@@ -1,4 +1,6 @@
 import logging
+import jsonschema
+from fixtures.deco import LogResponse
 
 class Response:
     @staticmethod
@@ -6,3 +8,10 @@ class Response:
         if not func:
             logging.error(message)
         assert func, message
+
+    @staticmethod
+    def validate(response, schema):
+        try:
+            jsonschema.validate(instance=response.json(), schema=schema)
+        except BaseException:
+            LogResponse.logger.warning("Wrong json")
