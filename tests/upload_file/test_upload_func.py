@@ -3,8 +3,7 @@ from fixtures.upload.api import upload_file
 import allure
 from fixtures.constants import Links
 from fixtures.response import Response
-from com.jsonschema.upload import ResponseUpload
-
+from com.jsonschema.file import FileResponse
 
 @allure.feature("Проверка загрузки файла")
 @allure.story("Проверка функции загрузки файла 'input.txt'")
@@ -13,7 +12,7 @@ def test_upload_file(update_refresh_token, get_file_id):
     with allure.step("Загрузка файла на Google Drive"):
         value = upload_file(Links.URL_CHECK)
     with allure.step("Запрос отправлен, проверим тело ответа"):
-        Response.validate(value, ResponseUpload.schema)
+        Response.validate(value, FileResponse.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 200, 'Check your file ID or file name')
     with allure.step("Проверим имя загруженного файла"):

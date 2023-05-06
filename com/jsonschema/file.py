@@ -1,4 +1,4 @@
-class ResponseUpload:
+class FileResponse:
     schema = {"type": "object",
               "properties": {
                   "kind": {"type": "string"},

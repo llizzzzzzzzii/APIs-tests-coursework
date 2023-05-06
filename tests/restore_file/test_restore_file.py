@@ -5,6 +5,8 @@ from fixtures.upload.api import upload_file
 from fixtures.constants import Links
 import allure
 from fixtures.response import Response
+from com.jsonschema.trash import ResponseTrash
+from com.jsonschema.error import ResponseError404
 
 @allure.feature("Проверка восстановление файла из корзины")
 @allure.story("Проверка функции восстановления файла 'input.txt' из корзины")
@@ -13,6 +15,8 @@ def test_restore_file(update_refresh_token, get_file_id):
     with allure.step("Восстановление файла из корзины Google Drive"):
         delete_file_to_the_trash(upload_file(Links.URL_CHECK).json()['id'])
         value = restore_file(Links.FILE_ID_CORR)
+    with allure.step("Запрос отправлен, проверим тело ответа"):
+        Response.validate(value, ResponseTrash.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 200, "Check your file ID")
     with allure.step("Проверим имя файла, который был восстановлен"):
@@ -24,5 +28,7 @@ def test_restore_file(update_refresh_token, get_file_id):
 def test_restore_unknown_file(update_refresh_token):
     with allure.step("Восстановление файла с неверным ID из корзины Google Drive"):
         value = restore_file(Links.FILE_ID)
+    with allure.step("Запрос отправлен, проверим тело ответа"):
+        Response.validate(value, ResponseError404.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 404, "Check your file ID")

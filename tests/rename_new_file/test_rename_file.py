@@ -3,6 +3,7 @@ import allure
 from fixtures.response import Response
 import pytest
 from fixtures.constants import Links
+from com.jsonschema.file import FileResponse
 
 @allure.feature("Проверка переименования файла")
 @allure.story("Проверка функции переименования файла")
@@ -10,6 +11,8 @@ from fixtures.constants import Links
 def test_rename_file(update_refresh_token):
     with allure.step("Переименование файла на Google Drive"):
         value = rename_file(Links.URL_CHECK)
+    with allure.step("Запрос отправлен, проверим тело ответа"):
+        Response.validate(value, FileResponse.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 200, "Check your link")
     with allure.step("Проверим имя файла"):

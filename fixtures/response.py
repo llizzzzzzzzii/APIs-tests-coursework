@@ -13,5 +13,6 @@ class Response:
     def validate(response, schema):
         try:
             jsonschema.validate(instance=response.json(), schema=schema)
+            LogResponse.logger.info("Correct json")
         except BaseException:
             LogResponse.logger.warning("Wrong json")

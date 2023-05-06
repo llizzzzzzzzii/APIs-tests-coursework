@@ -4,6 +4,8 @@ from fixtures.upload.api import upload_file
 from fixtures.constants import Links
 import allure
 from fixtures.response import Response
+from com.jsonschema.trash import ResponseTrash
+from com.jsonschema.error import ResponseError404
 
 @allure.feature("Проверка удаления файла в корзину")
 @allure.story("Проверка функции удаления файла 'input.txt' в корзину")
@@ -11,6 +13,8 @@ from fixtures.response import Response
 def test_delete_file_to_trash(update_refresh_token, get_file_id):
     with allure.step("Удаление файла в корзину с Google Drive"):
         value = delete_file_to_the_trash(upload_file(Links.URL_CHECK).json()['id'])
+    with allure.step("Запрос отправлен, проверим тело ответа"):
+        Response.validate(value, ResponseTrash.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 200, "Check your file ID")
     with allure.step("Проверим имя файла, который был удалён"):
@@ -22,5 +26,7 @@ def test_delete_file_to_trash(update_refresh_token, get_file_id):
 def test_delete_unknown_file_to_trash(update_refresh_token):
     with allure.step("Удаление файла в корзину с Google Drive"):
         value = delete_file_to_the_trash(Links.FILE_ID)
+    with allure.step("Запрос отправлен, проверим тело ответа"):
+        Response.validate(value, ResponseError404.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 404, "Check your file ID")

@@ -1,9 +1,10 @@
-import pytest
 from fixtures.get_info.api import get_info
 import allure
 from fixtures.response import Response
 import pytest
 from fixtures.constants import Links
+from com.jsonschema.info import ResponseInfo
+from com.jsonschema.error import ResponseError404
 
 @allure.feature("Проверка получения информации о файле")
 @allure.story("Проверка функции получения даты создания и размера файла")
@@ -11,6 +12,8 @@ from fixtures.constants import Links
 def test_get_file_info(update_refresh_token):
     with allure.step("Получение информации о файле на Google Drive"):
         value = get_info(Links.ID_FILE)
+    with allure.step("Запрос отправлен, проверим тело ответа"):
+        Response.validate(value, ResponseInfo.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 200, "Check your file ID")
     with allure.step("Проверим размер файла"):
@@ -24,5 +27,7 @@ def test_get_file_info(update_refresh_token):
 def test_get_unknown_file_info(update_refresh_token):
     with allure.step("Получение информации о файле на Google Drive"):
         value = get_info(Links.FILE_ID)
+    with allure.step("Запрос отправлен, проверим тело ответа"):
+        Response.validate(value, ResponseError404.schema)
     with allure.step("Запрос отправлен, посмотрим код ответа"):
         Response.log_assert(value.status_code == 404, "Check your file ID")
