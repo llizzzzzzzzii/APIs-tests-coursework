@@ -1,7 +1,0 @@
-[32mINFO    [0m api:request.py:13 Update refresh token
-[32mINFO    [0m api:request.py:15 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200
-[32mINFO    [0m api:request.py:13 Upload new file
-[32mINFO    [0m api:request.py:15 Response method: GET, url: https://www.googleapis.com/drive/v3/files/1lPonlujZ2s02LIkl0YfMPDtr0OftrRMj, status: 200
-[32mINFO    [0m api:request.py:13 Moving file
-[32mINFO    [0m api:request.py:15 Response method: PATCH, url: https://www.googleapis.com/drive/v3/files/1lPonlujZ2s02LIkl0YfMPDtr0OftrRMj?addParents=1CEJm-UnzfaNjcYQKW7Ctjx1d5S-DO44V&removeParents=1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr, status: 200
-[32mINFO    [0m response:response.py:16 Correct json
