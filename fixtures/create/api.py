@@ -6,6 +6,6 @@ def create_file(parents):
                                                       url=f"{Links.URL_ADD}",
                                                       headers={'Authorization': f'Bearer {Links.ACCESS_TOKEN}'},
                                                       json={'name': Links.CREATE_FILE_NAME,
-                                                            'parents': [parents]})
+                                                            'parents': [parents],
+                                                            "mimeType":Links.MIMETYPE})
     return response
-
