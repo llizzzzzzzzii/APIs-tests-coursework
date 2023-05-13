@@ -37,6 +37,7 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+          
       - name: Test reporting
         uses: simple-elf/allure-report-action@master
         if: always()
