@@ -1,9 +1,0 @@
-[32mINFO    [0m api:deco.py:22 Update refresh token
-[32mINFO    [0m api:deco.py:42 Request method: POST, url: https://oauth2.googleapis.com/token, body:refresh_token=1%2F%2F0c_QMjblQzhrECgYIARAAGAwSNwF-L9Ir8BdP8rZPXUf07o0a6OQHbLbIsX8wjRvuC4YzHp007JB0s42CdFhTYjFOJRHVIGgUgRM&client_id=77864409271-ujcgeg2243mca6ek98pn7qahbjjhalga.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token
-[32mINFO    [0m api:deco.py:53 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200, body:
-{
-    "access_token": "ya29.a0AWY7CkkkwSkgaRAH9mzI-rgurmF3124H5isR-xV8DIuR2YFJxAfIK7gN0ABxLlzsBajSAaIz6V3BXd6X9aMuTM9e4N8ShTradh9XzYzsalN5_EmgoycaubiUvhfw6stgzoZXwrPD6gudwjG7dFe-S_e1eJXv-geOaCgYKAZwSAQ4SFQG1tDrpkZpyLSN_XdDUl1QI98oaBw0167",
-    "expires_in": 3599,
-    "scope": "https://www.googleapis.com/auth/drive",
-    "token_type": "Bearer"
-}
