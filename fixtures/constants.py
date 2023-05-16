@@ -14,6 +14,7 @@ class Links:
     URL_DOWNLOAD = "https://www.googleapis.com/upload/" \
                    "drive/v3/files?uploadType=multipart"
     FILE_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data/input.txt")
+    FOLDER_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data")
     FILE_NAME = "input.txt"
     PARENTS = "1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr"
     # некорректный ID который используем для негативных тестов
@@ -24,15 +25,16 @@ class Links:
                'redirect_uri={}&scope=https://www.googleapis.com/' \
                'auth/drive&response_type=code&access_type=offline'
     # файл в который записываем содержимое скачанного файла
-    DOWNLOAD_FILE_NAME = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data/downloaded_file.txt")
+    DOWNLOAD_FILE_NAME = "downloaded_file.jpg"
     ACCESS_TOKEN = 'ya29.a0AWY7CkktLKzfQbNTDx2dp9R6CCQH7K1C14WOPHPXSQlkmKr0COMMnM6hMpLJSOvwleerIZV8t10NIU4N-mVp4xDovbattKX9IGwMdIUKQBMrJ88p4OuWP80V5bkv0dCA8aRcPEBmdXlrtCnFppi1vlSFN5dyLX5CaCgYKAYESAQ4SFQG1tDrpH8r9Kf3fDrnDPosJhoWbZw0167'
     FILE_ID_CORR = '1QZX7KDqQn3B9wqkDnGIJt4twph51K9wb'
     # для негативных тестов
-    FILE_NAME_INCORR = 'inpt.txt'
+    FILE_NAME_INCORR = 'input.txt'
     # для негативных тестов
     PARENTS_INCORR = 'D6y-7wueDGxoGFFtDfvjrVUDTVwr'
     # файл который скачиваем, он всегда один
-    DOWNLOAD_FILE_ID = '1aR5wXYRFi-KO8AE-6WQdrUJHG_W-QRXm'
+    # DOWNLOAD_FILE_ID = '1aR5wXYRFi-KO8AE-6WQdrUJHG_W-QRXm'
+    DOWNLOAD_FILE_ID = '1l1jGalHdBOGhlgxjf4_k2tdAh3YvyB0W'
     # новое название файла на которое будет переименовывать существующий файл
     NEW_FILE_NAME = 'testikk.txt'
     # имя папки которую будем создавать
@@ -55,3 +57,5 @@ class Links:
     FOLDER_FOR_MOVING = '1CEJm-UnzfaNjcYQKW7Ctjx1d5S-DO44V'
     # ссылка по которой перемещаем файл в корзину
     URL_DELETE = 'https://www.googleapis.com/drive/v2/files/'
+    # тип файла который будем загружать
+    MIMETYPE='text/plain'

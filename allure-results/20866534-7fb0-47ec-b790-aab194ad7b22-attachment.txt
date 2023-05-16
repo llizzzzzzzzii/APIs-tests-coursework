@@ -1,0 +1,4 @@
+[32mINFO    [0m api:request.py:13 Update refresh token
+[32mINFO    [0m api:request.py:15 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200
+[32mINFO    [0m api:request.py:13 Empty trash
+[32mINFO    [0m api:request.py:15 Response method: DELETE, url: https://www.googleapis.com/drive/v2/files/trash, status: 204
