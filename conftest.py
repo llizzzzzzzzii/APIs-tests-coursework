@@ -1,7 +1,6 @@
 import pytest
 from fixtures.constants import Links
 from fixtures.request import Request
-from fixtures.deco import logging as log
 import json
 import os
 import requests
@@ -15,8 +14,7 @@ def update_refresh_token_api():
     }
     response = Request("Update refresh token").send_request(method="POST",
                        url=Links.TOKEN_URL,
-                       data=token_data,
-                       )
+                       data=token_data)
     return response
 
 @pytest.fixture()

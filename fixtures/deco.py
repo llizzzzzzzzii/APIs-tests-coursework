@@ -28,7 +28,7 @@ class LogRequest:
         def wrapper(function):
             @wraps(function)
             def inner(*args, **kwargs):
-                LogReq.logger.info(message)
+                LogRequest.logger.info(message)
                 res = function(*args, **kwargs)
                 method = res.request.method
                 url = res.request.url
@@ -48,7 +48,7 @@ class LogRequest:
                         )
                     except AttributeError:
                         log_request += f", body:{body}"
-                LogReq.logger.info(log_request)
+                LogRequest.logger.info(log_request)
 
                 log_response = f"Response method: {method}, url: {url}, status: {status}"
                 try:
@@ -59,13 +59,13 @@ class LogRequest:
                         log_response += f", body:{body_sep}{bd}"
                     else:
                         log_response += f", body:{json.dumps(body)}"
-                    LogReq.logger.info(log_response)
+                    LogRequest.logger.info(log_response)
                 except JSONDecodeError:
                     if len(res.text) > 120:
                         log_response += f", body: {res.text[:120]}..."
                     else:
                         log_response += f", body: {res.text}"
-                    LogReq.logger.info(log_response)
+                    LogRequest.logger.info(log_response)
                 return res
 
             return inner
