@@ -22,6 +22,7 @@ def get_token():
         refresh_token = response.json()['refresh_token']
         Links.ACCESS_TOKEN = token
         Links.REFRESH_TOKEN = refresh_token
+        print(refresh_token)
         return token, refresh_token
     else:
         return None, None
