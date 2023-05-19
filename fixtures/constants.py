@@ -13,8 +13,10 @@ class Links:
     # ссылка по которой загружаем файл
     URL_DOWNLOAD = "https://www.googleapis.com/upload/" \
                    "drive/v3/files?uploadType=multipart"
-    FILE_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data/input.txt")
-    FOLDER_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data")
+    FILE_PATH=os.path.abspath("data/input.txt")
+    # FILE_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data/input.txt")
+    # FOLDER_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data")
+    FOLDER_PATH = os.path.abspath("data")
     FILE_NAME = "input.txt"
     PARENTS = "1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr"
     # некорректный ID который используем для негативных тестов
@@ -25,7 +27,7 @@ class Links:
                'redirect_uri={}&scope=https://www.googleapis.com/' \
                'auth/drive&response_type=code&access_type=offline'
     # файл в который записываем содержимое скачанного файла
-    DOWNLOAD_FILE_NAME = "test.txt"
+    DOWNLOAD_FILE_NAME = "input.txt"
     ACCESS_TOKEN = 'ya29.a0AWY7CkktLKzfQbNTDx2dp9R6CCQH7K1C14WOPHPXSQlkmKr0COMMnM6hMpLJSOvwleerIZV8t10NIU4N-mVp4xDovbattKX9IGwMdIUKQBMrJ88p4OuWP80V5bkv0dCA8aRcPEBmdXlrtCnFppi1vlSFN5dyLX5CaCgYKAYESAQ4SFQG1tDrpH8r9Kf3fDrnDPosJhoWbZw0167'
     FILE_ID_CORR = '1QZX7KDqQn3B9wqkDnGIJt4twph51K9wb'
     # для негативных тестов
