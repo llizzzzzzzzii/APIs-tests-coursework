@@ -5,6 +5,7 @@ import json
 import os
 import requests
 
+
 def update_refresh_token_api():
     token_data = {
         'refresh_token': Links.REFRESH_TOKEN,
@@ -17,6 +18,7 @@ def update_refresh_token_api():
                        data=token_data)
     return response
 
+# функция для обновления токена
 @pytest.fixture()
 def update_refresh_token():
     response = update_refresh_token_api()
@@ -27,6 +29,7 @@ def update_refresh_token():
     else:
         return None
 
+# функция для получения ID файла
 @pytest.fixture()
 def get_file_id():
     file_path = os.path.join(os.getcwd(), Links.FILE_PATH)

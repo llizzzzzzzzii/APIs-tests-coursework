@@ -1,6 +1,7 @@
 from fixtures.constants import Links
 from fixtures.request import Request
 
+# функция для скачивания файла
 def download_file(file_id):
     response = Request("Download file").send_request(method="GET",
                        url=f'{Links.URL_CHECK}{file_id}?alt=media',

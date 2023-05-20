@@ -8,16 +8,19 @@ class Links:
     SCOPE = 'https://www.googleapis.com/auth/drive'
     REFRESH_TOKEN = '1//' \
                     '0c_QMjblQzhrECgYIARAAGAwSNwF-L9Ir8BdP8rZPXUf07o0a6OQHbLbIsX8wjRvuC4YzHp007JB0s42CdFhTYjFOJRHVIGgUgRM'
+    # ссылка для получения токена
     GET_TOKEN = 'https://accounts.google.com/o/oauth2/auth?'
     TOKEN_URL = 'https://oauth2.googleapis.com/token'
     # ссылка по которой загружаем файл
     URL_DOWNLOAD = "https://www.googleapis.com/upload/" \
                    "drive/v3/files?uploadType=multipart"
+    # путь для файла
     FILE_PATH=os.path.abspath("data/input.txt")
-    # FILE_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data/input.txt")
-    # FOLDER_PATH = os.path.join(os.path.abspath("")[: os.path.abspath("").find('py-pytest') + 10], "data")
+    # путь для папки
     FOLDER_PATH = os.path.abspath("data")
+    # имя файла который загружаем, удаляем и т.д.
     FILE_NAME = "input.txt"
+    # ID родительской папки
     PARENTS = "1Geg7D6y-7wueDGxoGFFtDfvjrVUDTVwr"
     # некорректный ID который используем для негативных тестов
     FILE_ID = 'WEn4zGvB7fCo0Ew6WYJpL2KPhH'

@@ -1,6 +1,7 @@
 from fixtures.constants import Links
 from fixtures.request import Request
 
+# функция для создания папки
 def add_new_folder(parents):
     response = Request("Add new folder").send_request(method="POST",
                                                       url=f"{Links.URL_CHECK}",

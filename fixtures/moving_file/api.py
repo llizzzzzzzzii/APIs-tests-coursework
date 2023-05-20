@@ -1,6 +1,7 @@
 from fixtures.constants import Links
 from fixtures.request import Request
 
+# функция для перемещения файла
 def moving_file(file_id, new_parents):
     response = Request("Moving file").send_request(method="PATCH",
                                                    url=f'{Links.URL_CHECK}{file_id}?'
