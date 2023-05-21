@@ -1,3 +1,4 @@
+#json-схема для ответа запросов с действиями над файлом
 class FileResponse:
     schema = {"type": "object",
               "properties": {

@@ -1,3 +1,4 @@
+#json-схема для ответа на действия с корзиной
 class ResponseTrash:
     schema = {"type": "object",
               "properties": {

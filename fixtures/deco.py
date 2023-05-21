@@ -4,6 +4,7 @@ import pprint
 from functools import wraps
 from json import JSONDecodeError
 
+#логирование для обработки ответов
 class LogResponse:
     logger = logging.getLogger("response")
     logger.setLevel(logging.INFO)
@@ -12,6 +13,7 @@ class LogResponse:
     s_handler.setFormatter(s_format)
     logger.addHandler(s_handler)
 
+#логирование для запросов
 class LogRequest:
     logger = logging.getLogger("api")
     logger.setLevel(logging.INFO)

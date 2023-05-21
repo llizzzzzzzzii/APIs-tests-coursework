@@ -2,6 +2,7 @@ from com.get_token.api import get_token_api
 from fixtures.constants import Links
 import json
 
+#создание json для запроса на получение токена
 def get_token_json():
     auth_url = (Links.AUTH_URL.format(Links.CLIENT_ID, Links.REDIRECT_URI, Links.SCOPE))
     print('Откройте ссылку в браузере:\n{}'.format(auth_url))
@@ -15,6 +16,7 @@ def get_token_json():
     }
     return json.loads(json.dumps(token_data, default=lambda o: o.__dict__))
 
+#фунуция для получения токенов
 def get_token():
     response = get_token_api()
     if response.ok:

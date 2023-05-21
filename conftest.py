@@ -5,7 +5,7 @@ import json
 import os
 import requests
 
-
+#отправление запроса на получение нового access token
 def update_refresh_token_api():
     token_data = {
         'refresh_token': Links.REFRESH_TOKEN,

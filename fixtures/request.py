@@ -7,6 +7,7 @@ class Request:
         self.name = name
         pass
 
+    #функция для отправки запросов
     def send_request(self, method: str, url: str, **kwargs) -> Response:
         try:
             response = requests.request(method, url, **kwargs)

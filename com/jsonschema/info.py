@@ -1,3 +1,4 @@
+#json-схема для ответа для запроса на получение даты и времени файла
 class ResponseInfo:
     schema = {"type": "object",
               "properties": {

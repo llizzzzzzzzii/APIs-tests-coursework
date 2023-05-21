@@ -1,5 +1,6 @@
 from com.jsonschema.file import FileResponse
 
+#json-схема для ответа на запрос поиска файла
 class ResponseSearchFile:
     schema = {
         "nextPageToken": {"type": "string"},
@@ -10,6 +11,7 @@ class ResponseSearchFile:
         "required": ["kind", "incompleteSearch"]
     }
 
+#json-схема для ответа на запрос поиска папки
 class ResponseSearchFolder:
     schema = {
         "nextPageToken": {"type": "string"},

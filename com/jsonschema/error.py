@@ -1,3 +1,4 @@
+#json-схема для ответа с кодом ошибки 404
 class ResponseError404:
     schema = {"error": {
         "code": 404,
@@ -15,6 +16,7 @@ class ResponseError404:
         "required": ["error"]
     }
 
+#json-схема для ответа с кодом ошибки 403
 class ResponseError403:
     schema = {"error": {
         "code": 403,
