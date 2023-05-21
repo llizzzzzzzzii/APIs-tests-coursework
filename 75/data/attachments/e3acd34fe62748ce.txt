@@ -1,0 +1,6 @@
+INFO     api:request.py:14 Update refresh token
+INFO     api:request.py:16 Response method: POST, url: https://oauth2.googleapis.com/token, status: 200
+INFO     api:request.py:14 Upload new file
+INFO     api:request.py:16 Response method: GET, url: https://www.googleapis.com/drive/v3/files/1FikbEUAcKsVtKKArvef0Wvcdi9nupD-M, status: 200
+INFO     api:request.py:14 Delete file
+INFO     api:request.py:16 Response method: DELETE, url: https://www.googleapis.com/drive/v3/files/1FikbEUAcKsVtKKArvef0Wvcdi9nupD-M, status: 204
